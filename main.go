@@ -13,7 +13,9 @@ func main() {
 	switch os.Args[1] {
 	case "1":
 		max := MaxCalories(d01)
-		println("Max Calories:", max)
+		sum := TopThreeCalories(d01)
+		println("Max calories:", max)
+		println("Sum of top three:", sum)
 	default:
 		println("Invalid week.")
 		os.Exit(1)
