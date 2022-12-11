@@ -8,7 +8,7 @@ import (
 )
 
 //go:embed d01.input
-var d01 string
+var d01Input string
 
 func MaxCalories(inp string) int {
 	inp = strings.TrimSpace(inp)

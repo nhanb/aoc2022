@@ -1,27 +1,22 @@
 package main
 
 import (
-	"io/ioutil"
+	_ "embed"
 	"testing"
 )
 
-func TestMaxCalories(t *testing.T) {
-	input, err := ioutil.ReadFile("d01_test.input")
-	check(err)
-	str := string(input)
+//go:embed d01_test.input
+var d01TestInput string
 
-	ans := MaxCalories(str)
+func TestMaxCalories(t *testing.T) {
+	ans := MaxCalories(d01TestInput)
 	if ans != 24_000 {
 		t.Errorf("MaxCalories() = %d; want 24,000", ans)
 	}
 }
 
 func TestTopThreeCalories(t *testing.T) {
-	input, err := ioutil.ReadFile("d01_test.input")
-	check(err)
-	str := string(input)
-
-	ans := TopThreeCalories(str)
+	ans := TopThreeCalories(d01TestInput)
 	if ans != 45_000 {
 		t.Errorf("TopThreeCalories() = %d; want 24,000", ans)
 	}

@@ -12,8 +12,8 @@ func main() {
 
 	switch os.Args[1] {
 	case "1":
-		max := MaxCalories(d01)
-		sum := TopThreeCalories(d01)
+		max := MaxCalories(d01Input)
+		sum := TopThreeCalories(d01Input)
 		println("Max calories:", max)
 		println("Sum of top three:", sum)
 	default:
